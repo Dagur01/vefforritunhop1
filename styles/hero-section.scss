@@ -1,0 +1,28 @@
+
+
+.home-content{
+    display:flex;
+    flex-wrap: 1;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #c4a17f; /* Button background color */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}

@@ -1,0 +1,263 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.sr-only:not(:focus, :active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+:root {
+  --font-size-base: 16px;
+  --font-size-headings: 1.5rem;
+  /* Grunn bilið okkar er 1rem == 16px */
+  --spacing: 1rem;
+  /* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
+  --vertical-space: calc(var(--gutter) * 1);
+  --vertical-space-large: calc(var(--gutter) * 1.5);
+  /* Hámarks og lágmarks breidd á efni */
+  --max-width: 1200px;
+  --min-width-image: 200px;
+  --max-width-image: 300px;
+  --max-width-footer-section: 250px;
+  /* Border breiddir */
+  --border-width: 1px;
+  --border-radius-regular: 5px;
+  --border-radius-image: 10px;
+  --border-regular: 1px solid #000; /* todo longhand */
+  --border-with-background: 4px solid #cc99bb;
+  /* Grid stillingar */
+  --columns: 12;
+  --gutter: 30px;
+  --offset: 20px;
+  /* Breidd á efni með offset */
+  --width-offset: calc(100% - (2 * var(--offset)));
+  /* Litir */
+  /** Litir með nafni **/
+  --color-yellow: #f3dd99;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-purple: #eebbdd;
+  --color-purple-dark: #cc99bb;
+  /** Litir með notkun **/
+  --color-background-primary: var(--color-yellow);
+  --color-background-secondary: var(--color-purple);
+  --color-background-form: var(--color-white);
+  --color-border-with-background: var(--color-purple-dark);
+  /* Letur stillingar */
+  --font-base-size: 1rem;
+  --font-family-base: "Open Sans", Arial, Helvetica, sans-serif;
+  --font-family-heading: "Matemasie-Regular", "Comic Sans MS", cursive;
+  /* Transitions */
+  --transition-time-short: 300ms;
+  --transition-time-long: 600ms;
+  --transition-timing-function: ease-in-out;
+}
+
+:root {
+  --grid-color: hsla(0, 75%, 75%, 0.25);
+  --grid-repeating-width: calc(100% / var(--columns));
+  --grid-column-width: calc((100% / var(--columns)) - var(--gutter));
+  --grid-background-width: calc(100% + var(--gutter));
+  --grid-background-columns: repeating-linear-gradient(
+    to right,
+    var(--grid-color),
+    var(--grid-color) var(--grid-column-width),
+    transparent var(--grid-column-width),
+    transparent var(--grid-repeating-width)
+  );
+}
+
+html {
+  position: relative;
+}
+
+html::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: calc(100% - 2 * var(--offset));
+  max-width: var(--max-width);
+  min-height: 100vh;
+  background-image: var(--grid-background-columns);
+  background-size: var(--grid-background-width) 100%;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  width: 100%;
+  justify-items: center;
+  gap: var(--vertical-space);
+  width: 100%;
+  min-height: 100vh;
+}
+
+@media (width >= 800px) {
+  .wrapper {
+    gap: var(--vertical-space-large);
+  }
+}
+.wrapper .wrapper-content {
+  width: var(--width-offset);
+  max-width: var(--max-width);
+}
+
+.wrapper .wrapper-nav {
+  margin-bottom: var(--spacing);
+}
+
+@media (width >= 800px) {
+  .wrapper .wrapper-content {
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    gap: var(--gutter);
+  }
+  .wrapper .wrapper-nav {
+    grid-column: span 2;
+  }
+  .wrapper .wrapper-main {
+    grid-column: span 10;
+  }
+}
+nav {
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing);
+  list-style: none;
+}
+
+.links {
+  display: flex;
+  margin-left: auto;
+  gap: 1rem;
+  margin-right: 1rem;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: brown;
+}
+
+.home-content {
+  display: flex;
+  flex-wrap: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #c4a17f; /* Button background color */
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+html,
+input,
+select,
+button {
+  font-family: var(--font-family-base);
+}
+
+/*** Allar fyrirsagnir nota Matemasie regular ***/
+h1,
+h2,
+h3,
+legend {
+  font-family: var(--font-family-heading);
+}
+
+@font-face {
+  font-family: "Matemasie-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/Matemasie-Regular.ttf") format("woff2");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/OpenSans-VariableFont_wdth,wght.ttf") format("woff2");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 700;
+  src: url("./fonts/OpenSans-VariableFont_wdth,wght.ttf") format("woff2");
+}
+header {
+  padding: var(--spacing) calc(var(--spacing) * 1.5);
+  width: 100%;
+  background-color: var(--color-background-secondary);
+  border-bottom: var(--border-with-background);
+}
+
+.navbar {
+  grid-column: span 12;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=styles.css.map */
