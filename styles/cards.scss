@@ -1,0 +1,32 @@
+.cards {
+    display: grid;
+    grid-template-rows: auto;
+    gap: var(--vertical-space);
+    justify-items: center;
+    background-color: #FAFAFA;
+    width: 100%;
+  }
+  
+  .cards > .title {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .cards > .content {
+    display: grid;
+    grid-template-rows: auto;
+    gap: var(--vertical-space);
+    justify-items: left;
+    width: 100%;
+  }
+
+  .cards > .content > .read-more{
+    margin-left: auto;
+  }
+  
+  @media (min-width: 700px) {
+    .cards > .content {
+      grid-template-columns: repeat(calc(var(--columns) - 2), 1fr);
+      grid-template-rows: auto;
+    }
+  }

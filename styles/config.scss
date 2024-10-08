@@ -71,7 +71,7 @@
   
     /* Letur stillingar */
     --font-base-size: 1rem;
-    --font-family-base: 'Open Sans', Arial, Helvetica, sans-serif;
+    --font-family-base: 'Poppins', Arial, Helvetica, sans-serif;
     --font-family-heading: 'Matemasie-Regular', 'Comic Sans MS', cursive;
   
     /* Transitions */
@@ -79,3 +79,9 @@
     --transition-time-long: 600ms;
     --transition-timing-function: ease-in-out;
 }
+
+main > .content {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2);
+  }
