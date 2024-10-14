@@ -161,6 +161,7 @@ nav ul {
   justify-content: center;
   gap: var(--spacing);
   list-style: none;
+  margin: auto;
 }
 
 .links {
@@ -416,6 +417,9 @@ header {
     grid-template-columns: repeat(calc(var(--columns) - 2), 1fr);
     grid-template-rows: auto;
   }
+}
+.newsletter {
+  background-color: #000;
 }
 
 /*# sourceMappingURL=styles.css.map */
