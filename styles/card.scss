@@ -1,7 +1,7 @@
 .card {
     display: flex;
     flex-direction: column;
-  
+    grid-column: span 4;
     width: 100%;
   }
   

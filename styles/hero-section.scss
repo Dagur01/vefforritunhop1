@@ -7,6 +7,7 @@
     max-width: 1600px;
     margin: 0 auto;
     height: 800px;
+    background-color: #fafafa;
 }
 
 .text{
@@ -14,27 +15,23 @@
     flex: 1;
     margin-right: 2rem;
 }
-.text h5{
-    color: #c4a17f; /* Light gold color */
-    font-size: 18px;
-    font-weight: 400;
-    margin-bottom: 10px;
-}
 
 .text h1{
     font-size: 56px;
     font-weight: bold;
     margin: 0;
+    font-family: 'playfair display';
+    color: #000;
 }
 
 .text p {
-    color: #4b4b4b;
+    color: #5E5B69;
     font-size: 18px;
     line-height: 1.6;
     margin-top: 20px;
     margin-bottom: 40px;
+    font-family: 'Poppins';
 }
-
 
 .cta-button {
     display: inline-flex;
@@ -61,14 +58,13 @@
 }
 
 .mynd {
-    max-width: 300px;
+    max-width: 30%;
 }
 
 .mynd img {
-    max-width: 55%;
+    max-width: 30%;
 
     border-radius: 4px;
-    max-width: 300px;
     max-height: 300px;
 }
 
