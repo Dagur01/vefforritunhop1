@@ -1,18 +1,17 @@
 header {
     padding: var(--spacing) calc(var(--spacing) * 1.5);
     width: 100%;
-    background-color: var(--color-background-secondary);
-    border-bottom: var(--border-with-background);
+    background-color: var(#ffff);
+    max-width: 1600px;
+    
 }
 
 .navbar{
     grid-column:span 12;
-    margin-right: 2rem;
-    margin-left: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+
 }
 .logo{
     font-size: 24px;

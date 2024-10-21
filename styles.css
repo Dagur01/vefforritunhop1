@@ -181,7 +181,7 @@ a:hover {
 }
 
 a:visited {
-  color: brown;
+  color: black;
 }
 
 .content-container {
@@ -194,6 +194,7 @@ a:visited {
   margin: 0 auto;
   height: 800px;
   background-color: #fafafa;
+  overflow: hidden;
 }
 
 .text {
@@ -299,18 +300,15 @@ legend {
 header {
   padding: var(--spacing) calc(var(--spacing) * 1.5);
   width: 100%;
-  background-color: var(--color-background-secondary);
-  border-bottom: var(--border-with-background);
+  background-color: var(white);
+  max-width: 1600px;
 }
 
 .navbar {
   grid-column: span 12;
-  margin-right: 2rem;
-  margin-left: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 
 .logo {
