@@ -58,14 +58,11 @@
 }
 
 .mynd {
-    max-width: 30%;
+    
 }
 
 .mynd img {
-    max-width: 30%;
-
-    border-radius: 4px;
-    max-height: 300px;
+    
 }
 
 @media (max-width: 768px) {
@@ -83,4 +80,9 @@
         max-width: 100%;
         margin-top: 20px;
     }
+}
+
+.latest-recipe{
+    width: 100%;
+    max-width: 1600px;
 }

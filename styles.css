@@ -33,7 +33,7 @@ html {
   --vertical-space: calc(var(--gutter) * 1);
   --vertical-space-large: calc(var(--gutter) * 1.5);
   /* Hámarks og lágmarks breidd á efni */
-  --max-width: 1200px;
+  --max-width: 1600px;
   --min-width-image: 200px;
   --max-width-image: 300px;
   --max-width-footer-section: 250px;
@@ -158,7 +158,7 @@ nav {
 nav ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-end;
   gap: var(--spacing);
   list-style: none;
   margin: auto;
@@ -243,16 +243,6 @@ a:visited {
   background-color: #b08e6f;
 }
 
-.mynd {
-  max-width: 30%;
-}
-
-.mynd img {
-  max-width: 30%;
-  border-radius: 4px;
-  max-height: 300px;
-}
-
 @media (max-width: 768px) {
   .content-container {
     flex-direction: column;
@@ -267,6 +257,11 @@ a:visited {
     margin-top: 20px;
   }
 }
+.latest-recipe {
+  width: 100%;
+  max-width: 1600px;
+}
+
 html,
 input,
 select,
@@ -326,7 +321,7 @@ header {
 .card {
   display: flex;
   flex-direction: column;
-  grid-column: span 6;
+  grid-column: span 4;
   width: 100%;
 }
 
@@ -374,6 +369,11 @@ header {
 
 .card > .content > .text {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: stretch;
 }
 
 .card > .content > .actions {
@@ -383,12 +383,18 @@ header {
   margin-top: var(--spacing);
 }
 
+.lower-text {
+  display: flex;
+  margin-right: 1rem;
+  justify-content: space-between;
+}
+
 .cards {
   display: grid;
   grid-template-rows: auto;
   gap: var(--vertical-space);
   justify-items: end;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   width: 100%;
   margin: 2rem;
   margin-right: 2rem;
@@ -399,13 +405,13 @@ header {
   width: 100%;
   text-align: left;
   margin-left: 2rem;
+  margin-top: 2rem;
 }
 
 .cards > .content {
   display: grid;
-  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--vertical-space);
-  justify-items: left;
   width: 100%;
   margin: 2rem;
 }
@@ -422,6 +428,87 @@ header {
 }
 .newsletter {
   background-color: #000;
+  text-decoration-color: white;
+  display: flex;
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.recipe-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Adjust the column ratio to your preference */
+  gap: 20px; /* Space between the two columns */
+  padding: 20px;
+  max-width: 1600px;
+}
+
+.ingredients, .method {
+  background-color: #f9f9f9; /* Light background for each section */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ingredients h2, .method h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.ingredients ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.ingredients ul li {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.method p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.difficulty {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 50%;
+  align-items: center;
+}
+
+.icon {
+  object-fit: contain;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .recipe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    align-items: stretch;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

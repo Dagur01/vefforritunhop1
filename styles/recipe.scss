@@ -1,0 +1,63 @@
+.recipe-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Adjust the column ratio to your preference */
+    gap: 20px; /* Space between the two columns */
+    padding: 20px;
+    max-width: 1600px;
+}
+
+.ingredients, .method {
+    background-color: #f9f9f9; /* Light background for each section */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ingredients h2, .method h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.ingredients ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ingredients ul li {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.method p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.difficulty{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 50%;
+    align-items: center;
+}
+
+.icon{
+    object-fit: contain;
+}
+
+.info-item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .recipe-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        align-items: stretch;
+    }
+
+}
