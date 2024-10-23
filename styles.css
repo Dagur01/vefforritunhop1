@@ -404,6 +404,8 @@ header {
   text-align: left;
   margin-left: 2rem;
   margin-top: 2rem;
+  font-family: "Poppins";
+  font-weight: 500;
 }
 
 .cards > .content {
@@ -425,9 +427,81 @@ header {
   }
 }
 .newsletter {
-  background-color: #000;
-  text-decoration-color: white;
+  background-color: black;
+  max-width: 1600px;
+  height: 15rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.hlutir {
+  max-width: 1000px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1rem;
+}
+
+.ph2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ph2 > p, h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.ph2 > p {
+  font-family: "Poppins";
+  font-weight: 500;
+  color: #E3CDB1;
+}
+
+.ph2 > h2 {
+  font-family: "Playfair Display";
+  font-weight: 700;
+  color: #FFF;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.email > label {
+  color: #FFFFFF;
+  font-family: "Poppins";
+  margin-bottom: 0.5rem;
+}
+
+input[type=email] {
+  border: none;
+  border-bottom: 1px solid #E3CDB1;
+  background-color: transparent;
+  outline: none;
+  width: 300px;
+  font-family: Playfair Display;
+}
+
+.Subscribe > button {
+  background-color: transparent;
+  border: 1px solid #E3CDB1;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+}
+
+.Subscribe > button > p {
+  background-color: transparent;
+  font-family: "Poppins";
+  font-weight: 500;
+  color: #E3CDB1;
 }
 
 .footer {
