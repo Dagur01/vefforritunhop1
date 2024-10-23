@@ -29,3 +29,16 @@ a:hover{
 a:visited{
     color: black;
 }
+
+@media (max-width: 700px) {
+    .links{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #333;
+        padding: 10px;
+    }
+    
+}

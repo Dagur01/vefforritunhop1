@@ -17,6 +17,7 @@
   margin-top: 2rem;
   font-family: 'Poppins';
   font-weight: 500;
+  color: #E3CDB1;
 }
 
 .cards > .content {
@@ -27,9 +28,22 @@
   margin: 2rem;
   
 }
+.cards > .title > h2{
+  font-family: 'Playfair Display';
+  color: gray;
+  text-align: left;
+}
 
 .cards > .content > .read-more {
   margin-left: auto;
+}
+
+.takki{
+  max-width: 1600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 700px) {

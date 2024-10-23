@@ -184,6 +184,17 @@ a:visited {
   color: black;
 }
 
+@media (max-width: 700px) {
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #333;
+    padding: 10px;
+  }
+}
 .content-container {
   display: flex;
   justify-content: space-between;
@@ -406,6 +417,7 @@ header {
   margin-top: 2rem;
   font-family: "Poppins";
   font-weight: 500;
+  color: #E3CDB1;
 }
 
 .cards > .content {
@@ -416,8 +428,22 @@ header {
   margin: 2rem;
 }
 
+.cards > .title > h2 {
+  font-family: "Playfair Display";
+  color: gray;
+  text-align: left;
+}
+
 .cards > .content > .read-more {
   margin-left: auto;
+}
+
+.takki {
+  max-width: 1600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 700px) {
@@ -448,6 +474,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
 }
 
 .ph2 > p, h2 {
@@ -471,6 +498,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
 }
 
 .email > label {
@@ -486,6 +514,12 @@ input[type=email] {
   outline: none;
   width: 300px;
   font-family: Playfair Display;
+}
+
+.Subscribe {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .Subscribe > button {
@@ -504,6 +538,15 @@ input[type=email] {
   color: #E3CDB1;
 }
 
+@media (max-width: 700px) {
+  .hlutir {
+    display: flex;
+    flex-direction: column;
+  }
+  .Subscribe > button {
+    margin-top: 1rem;
+  }
+}
 .footer {
   display: flex;
   width: 100%;
@@ -512,7 +555,7 @@ input[type=email] {
   margin: 4rem;
 }
 
-.links {
+.linkss {
   display: flex;
   flex-direction: row;
   justify-content: center;
