@@ -15,9 +15,9 @@
   text-align: left;
   margin-left: 2rem;
   margin-top: 2rem;
-  font-family: 'Poppins';
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
-  color: #E3CDB1;
+  color: #e3cdb1;
 }
 
 .cards > .content {
@@ -26,11 +26,11 @@
   gap: var(--vertical-space);
   width: 100%;
   margin: 2rem;
-  
 }
-.cards > .title > h2{
+
+.cards > .title > h2 {
   font-family: 'Playfair Display';
-  color: gray;
+  color: (128, 128, 128);
   text-align: left;
 }
 
@@ -38,7 +38,7 @@
   margin-left: auto;
 }
 
-.takki{
+.takki {
   max-width: 1600px;
   width: 100%;
   display: flex;
@@ -52,4 +52,3 @@
     grid-template-rows: auto;
   }
 }
-

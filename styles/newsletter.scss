@@ -1,91 +1,97 @@
-.newsletter{
-    background-color: black;
-    max-width: 1600px;
-    height: 15rem;
-    display: grid;
-    align-items: center;
-    justify-content: center;
+.newsletter {
+  background-color: #000;
+  max-width: 1600px;
+  height: 15rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
 
-.hlutir{
-    max-width: 1000px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin: 1rem;
+.hlutir {
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1rem;
 }
 
-.ph2{
+.ph2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.ph2 > p,
+h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.ph2 > p {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  color: #e3cdb1;
+}
+
+.ph2 > h2 {
+  font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.email > label {
+  color: #fff;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+input[type='email'] {
+  border: 0;
+  border-bottom: 1px solid #e3cdb1;
+  background-color: transparent;
+  outline: none;
+  width: 300px;
+  font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+}
+
+.subscribe {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.subscribe > button {
+  background-color: transparent;
+  border: 1px solid #e3cdb1;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+}
+
+.subscribe > button > p {
+  background-color: transparent;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  color: #e3cdb1;
+}
+
+@media (max-width: 700px) {
+  .hlutir {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-}
-.ph2 > p, h2{
-    color: white;
-    margin-bottom: 1rem;
-}
-.ph2 > p{
-    font-family: 'Poppins';
-    font-weight: 500;
-    color: #E3CDB1;
-}
-.ph2 > h2{
-    font-family: 'Playfair Display';
-    font-weight: 700;
-    color: #FFF;
-}
+  }
 
-.email{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-}
-.email > label{
-    color: #FFFFFF;
-    font-family: 'Poppins';
-    margin-bottom: 0.5rem;
-}
-
-input[type="email"] {
-    border: none;
-    border-bottom: 1px solid #E3CDB1;
-    background-color: transparent;
-    outline: none;
-    width: 300px;
-    font-family: Playfair Display;
-}
-
-.Subscribe{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.Subscribe > button{
-    background-color: transparent;
-    border: 1px solid #E3CDB1;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-left: 10px; 
-}
-.Subscribe > button > p{
-    background-color: transparent;
-    font-family: 'Poppins';
-    font-weight: 500;
-    color: #E3CDB1;
-}
-
-@media (max-width: 700px){
-    .hlutir{
-        display: flex;
-        flex-direction: column;
-    }
-    .Subscribe > button{
-        margin-top: 1rem;
-    }
-
+  .subscribe > button {
+    margin-top: 1rem;
+  }
 }
