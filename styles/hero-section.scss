@@ -1,6 +1,6 @@
 .content-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 50px 2rem;
   width: 100%;
@@ -78,4 +78,17 @@
 .latest-recipe {
   width: 100%;
   max-width: 1600px;
+}
+
+.content-container > .text > h2 {
+  font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #000;
+  font-size: 60px;
+}
+
+.content-container > .text > .Announcement{
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  color: #E3CDB1;
 }

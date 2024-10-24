@@ -15,9 +15,9 @@
   text-align: left;
   margin-left: 2rem;
   margin-top: 2rem;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
   font-weight: 500;
-  color: #e3cdb1;
+  color: #000;
 }
 
 .cards > .content {
@@ -26,12 +26,6 @@
   gap: var(--vertical-space);
   width: 100%;
   margin: 2rem;
-}
-
-.cards > .title > h2 {
-  font-family: 'Playfair Display';
-  color: (128, 128, 128);
-  text-align: left;
 }
 
 .cards > .content > .read-more {
@@ -51,4 +45,44 @@
     grid-template-columns: repeat(calc(var(--columns) - 2), 1fr);
     grid-template-rows: auto;
   }
+}
+
+.toppur{
+  max-width: 1600px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.heading > h2 {
+  font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #000;
+  font-size: 60px;
+}
+
+.heading > p{
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  color: #E3CDB1;
+  margin-bottom: 1rem;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  max-width: 300px;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.checkbox > checkbox {
+  margin-right: 1rem;
 }

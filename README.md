@@ -1,4 +1,4 @@
-Hópverkefni 1 
+# Hópverkefni 1
 
 - Til að keyra þetta verkefni skal nota skipunina npm run dev
 
